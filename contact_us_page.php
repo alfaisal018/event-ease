@@ -6,7 +6,7 @@
   <title>Contact Us | EventEase</title>
   <link rel="stylesheet" href="./public/navbar.css">
   <link rel="stylesheet" href="./public/contact_us.css">
-  <script src="https://kit.fontawesome.com/8f7b27f9d3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8f7b27f9d3.js"crossorigin="anonymous"></script>
 </head>
 <body>
 <?php include './navbar.php'; ?>

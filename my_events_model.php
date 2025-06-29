@@ -8,6 +8,6 @@ function getMyEvents($id){
   while($row=$result->fetch_assoc()){
     $myEvents[]=$row;
   }
-  return $myEvents;
+  return json_encode($myEvents);
 }
 ?>

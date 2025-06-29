@@ -1,6 +1,6 @@
 <?php
 include './my_events_controller.php';
-$myEvents=myEvents(9);
+$myEvents=json_decode(myEvents(9));
 ?>
  
 <!DOCTYPE html>
@@ -29,19 +29,20 @@ $myEvents=myEvents(9);
       </thead>
       <tbody>
         <?php
-          foreach($myEvents as $row){
+          foreach($myEvents as $key=>$value) {
             echo "<tr>
-              <td>" . htmlspecialchars($row['title']) . "</td>
-              <td>" . htmlspecialchars($row['location']) . "</td>
-              <td>{$row['date']}</td>
-              <td>{$row['time']}</td>
-              <td>{$row['number_of_tickets']}</td>
-              <td>{$row['booking_time']}</td>
+              <td>".$value->title."</td>
+              <td>".$value->location."</td>
+              <td>".$value->date."</td>
+              <td>".$value->time."</td>
+              <td>".$value->number_of_tickets."</td>
+              <td>".$value->booking_time."</td>
             </tr>";
           }
-          ?>
+        ?>
       </tbody>
     </table>
   </section>
 </body>
 </html>
+ 
